@@ -1,8 +1,8 @@
 # Product Blueprint
 
-**Nombre del proyecto:** Escriban aquí el nombre
+**Nombre del proyecto:** SecureTrace Industry (STI)
 
-**Repositorio (enlace obligatorio):** [Nombre del repositorio](https://github.com/usuario/repositorio)
+**Repositorio (enlace obligatorio):** [ProyectoBase](https://github.com/danielmaturana09/ProyectoBase/tree/main)
 
 > Los campos marcados como *enlace obligatorio* deben ir como enlace en Markdown, con este formato: `[texto del enlace](https://...)`. Reemplacen el texto y la dirección de ejemplo.
 
@@ -29,8 +29,8 @@
 
 | Prioridad | Historia | Propuesta por | Por qué entra al backlog |
 | :---: | --- | :---: | --- |
-| 1 | Como [rol] quiero [acción] para [beneficio]. | Nombre | Escriban aquí su respuesta. |
-| 2 | Como [rol] quiero [acción] para [beneficio]. | Nombre | Escriban aquí su respuesta. |
+| 1 | Como Supervisor de Planta, quiero dar de alta un equipo industrial registrando su identificador único y especificaciones para crear su hoja de vida inalterable en la red. | Daniel Maturana | Es el punto de partida del sistema; sin el activo digitalizado en el contrato inteligente no existe objeto sobre el cual asociar mantenimientos. |
+| 2 | Como Técnico de Servicio, quiero registrar una orden de mantenimiento (preventivo/correctivo) subiendo el hash del informe técnico, repuestos usados y mi firma digital para vincular la intervención al equipo sin posibilidad de alteración. | Karina Garay | Constituye el núcleo de la propuesta de valor: la stamping y prueba de existencia inmutable de la orden de servicio. |
 | 3 | Como [rol] quiero [acción] para [beneficio]. | Nombre | Escriban aquí su respuesta. |
 | 4 | Como [rol] quiero [acción] para [beneficio]. | Nombre | Escriban aquí su respuesta. |
 | 5 | Como [rol] quiero [acción] para [beneficio]. | Nombre | Escriban aquí su respuesta. |
