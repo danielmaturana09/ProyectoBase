@@ -31,9 +31,9 @@
 | :---: | --- | :---: | --- |
 | 1 | Como Supervisor de Planta, quiero dar de alta un equipo industrial registrando su identificador único y especificaciones para crear su hoja de vida inalterable en la red. | Daniel Maturana | Es el punto de partida del sistema; sin el activo digitalizado en el contrato inteligente no existe objeto sobre el cual asociar mantenimientos. |
 | 2 | Como Técnico de Servicio, quiero registrar una orden de mantenimiento (preventivo/correctivo) subiendo el hash del informe técnico, repuestos usados y mi firma digital para vincular la intervención al equipo sin posibilidad de alteración. | Karina Garay | Constituye el núcleo de la propuesta de valor: la stamping y prueba de existencia inmutable de la orden de servicio. |
-| 3 | Como [rol] quiero [acción] para [beneficio]. | Nombre | Escriban aquí su respuesta. |
-| 4 | Como [rol] quiero [acción] para [beneficio]. | Nombre | Escriban aquí su respuesta. |
-| 5 | Como [rol] quiero [acción] para [beneficio]. | Nombre | Escriban aquí su respuesta. |
+| 3 | Como Auditor de Calidad o Representante de Aseguradora, quiero consultar el historial completo de un equipo mediante su ID y validar el hash de un PDF presentado, para verificar si el registro técnico ha sido modificado o falsificado tras una falla. | Daniel Maturana | Entrega la funcionalidad central de verificación pública e independiente con un solo clic para las partes que no confían entre sí. |
+| 4 | Como Técnico de Servicio en campo, quiero cargar el informe de mantenimiento en PDF a través de una interfaz web que calcule el hash SHA-256 automáticamente en el navegador, para firmar digitalmente la intervención sin procesar hashes manualmente ni manejar conceptos criptográficos complejos. | Karina Garay | Es vital para la adopción: elimina la fricción de entrada calculando la huella digital del archivo de forma transparente en el cliente antes de la firma. |
+| 5 | Como Supervisor de Planta, quiero asociar la dirección pública (public key) de un proveedor autorizado a un equipo, para restringir qué contratistas tienen permiso de registrar mantenimientos en los activos de la empresa. | Daniel Maturana | Añade una capa esencial de control de acceso e identidad para que terceros no autorizados no puedan emitir registros sobre los equipos. |
 
 *(Agreguen o borren filas según las historias que pasen al backlog.)*
 
