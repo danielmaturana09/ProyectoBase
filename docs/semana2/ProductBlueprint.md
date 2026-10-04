@@ -43,13 +43,13 @@
 
 > Qué resultado obtiene el usuario y por qué elegiría esta solución. En qué se diferencia de cómo resuelve hoy. Conecta con el usuario del Problem Brief. Extensión: 150–300 palabras en total.
 
-**Usuario (del Problem Brief):** Escriban aquí su respuesta.
+**Usuario (del Problem Brief):** Supervisores de infraestructura, jefes de mantenimiento y directores de operaciones a cargo de maquinaria industrial y sistemas críticos.
 
-**Resultado que obtiene:** Escriban aquí su respuesta.
+**Resultado que obtiene:** Una hoja de vida digital, inalterable, neutral y con sello de tiempo verificado criptográficamente que respalda cada calibración, reemplazo de repuestos y mantenimiento ejecutado en sus activos.
 
-**Por qué elegiría esta solución:** Escriban aquí su respuesta.
+**Por qué elegiría esta solución:** Porque elimina la vulnerabilidad de depender de archivos PDF editables o bases de datos centralizadas donde el proveedor o cliente puede modificar registros retroactivamente tras una falla. Le permite demostrar ante auditores, fabricantes y aseguradoras la validez irrefutable de sus procedimientos sin requerir peritajes ni litigios costosos.
 
-**En qué se diferencia de cómo lo resuelve hoy:** Escriban aquí su respuesta.
+**En qué se diferencia de cómo lo resuelve hoy:** Actualmente el historial se gestiona mediante actas impresas, planillas de Excel o módulos ERP/CMMS centralizados en los que la parte administradora puede editar la información a conveniencia. SecureTrace Industry descentraliza la prueba de autenticidad: la información técnica relevante se convierte en un hash SHA-256 guardado en un Smart Contract en Soroban (Stellar), garantizando que nadie pueda alterar la secuencia temporal ni el contenido de una orden de servicio.
 
 ---
 
@@ -59,10 +59,10 @@
 
 | Paso | Rol | Qué hace | Punto de interacción |
 | :---: | :---: | --- | --- |
-| 1 | Rol | Escriban aquí su respuesta. | Pantalla, billetera, red, etc. |
-| 2 | Rol | Escriban aquí su respuesta. | Pantalla, billetera, red, etc. |
-| 3 | Rol | Escriban aquí su respuesta. | Pantalla, billetera, red, etc. |
-| 4 | Rol | Escriban aquí su respuesta. | Pantalla, billetera, red, etc. |
+| 1 | Supervisor de Planta | Conecta su billetera (Freighter) a la dApp y registra un nuevo equipo asignándole su identificador único (ID/Serie) y la dirección pública del proveedor técnico autorizado. | Interfaz Web (Next.js) / Billetera Freighter. / Smart Contract en Soroban. |
+| 2 | Técnico de Servicio | Acude a la planta, ejecuta el mantenimiento correctivo/preventivo, genera el informe técnico en PDF y accede a la sección de registro de la dApp. | Interfaz Web / Formulario de carga de órdenes. |
+| 3 | Técnico de Servicio | Adjunta el PDF en la web; la aplicación calcula localmente el hash SHA-256 del documento. El técnico aprueba y firma la transacción en Freighter para enviar la prueba a la red. | Módulo JS en cliente / Billetera Freighter / Red Stellar (Soroban). |
+| 4 | Auditor / Aseguradora | Ingresa a la vista pública de auditoría de la dApp, digita el ID del equipo o arrastra el archivo PDF del informe entregado por las partes. | Dashboard público de verificación. |
 
 *(Agreguen los pasos que hagan falta. Si prefieren, inserten aquí un diagrama.)*
 
@@ -74,11 +74,13 @@
 
 | Dentro del MVP (funcionalidad central) | Fuera del MVP (deseable, para después) |
 | --- | --- |
-| Escriban aquí su respuesta. | Escriban aquí su respuesta. |
-| Escriban aquí su respuesta. | Escriban aquí su respuesta. |
-| Escriban aquí su respuesta. | Escriban aquí su respuesta. |
+| Registro y alta de equipos industriales con identificador único por parte del supervisor. | Tokenización de activos industriales mediante estándares NFT (SEP-1) para representar la propiedad legal del equipo. |
+| Gestión de permisos básica (asociación de claves públicas de proveedores autorizados por equipo). | Integración automatizada mediante sensores IoT u oráculos para captura de horas de uso y telemetría de fallas en tiempo real. |
+| Generación de hash SHA-256 local del informe técnico e inserción inmutable en Soroban con sello de tiempo del ledger. | Almacenamiento descentralizado completo de archivos pesados de alta resolución en IPFS o Arweave. |
 
 **Por qué el recorte sigue entregando valor:** Escriban aquí su respuesta.
+
+El recorte estratégico se centra exclusivamente en resolver la causa raíz de la desconfianza: la autenticidad e inmutabilidad del registro de mantenimiento. Sin necesidad de desplegar sensores IoT costosos ni tokenizar activos complejos, el hash criptográfico guardado en Soroban junto con la firma del técnico y el sello de tiempo del ledger otorga certeza técnica y legal inmediata. Esto valida plenamente la hipótesis del proyecto reduciendo el tiempo de resolución de disputas de semanas a segundos con la menor fricción posible.
 
 ---
 
