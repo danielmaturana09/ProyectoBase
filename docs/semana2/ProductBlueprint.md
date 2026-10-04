@@ -88,7 +88,7 @@ El recorte estratégico se centra exclusivamente en resolver la causa raíz de l
 
 > Lienzo de una página con el modelo del producto. Extensión: enlace (obligatorio).
 
-**Enlace al Lean Canvas (obligatorio):** [Lean Canvas del proyecto]([https://escriban-aqui-el-enlace](https://canva.link/rd3cs23k1sea9w9)
+**Enlace al Lean Canvas (obligatorio):** [Lean Canvas del proyecto](https://canva.link/rd3cs23k1sea9w9)
 
 El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única, solución, canales, métricas clave, ventaja diferencial y estructura de costos e ingresos.
 
