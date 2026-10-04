@@ -110,11 +110,15 @@ El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única
 
 | Capa | Componente | Qué hace |
 | :---: | --- | --- |
-| Interfaz | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
-| Lógica | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
-| Stellar | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
+| Interfaz | Next.js + Tailwind CSS. | Proporciona el panel para el alta de activos, el formulario de carga de informes para técnicos y el buscador/verificador público para auditores. Integra la biblioteca de Freighter para autenticación. |
+| Lógica | Soroban SDK + JS Client. | Ejecuta la lógica del cliente en el navegador, procesa el cálculo del hash SHA-256 de los archivos PDF adjuntos y construye las llamadas a los métodos del Smart Contract. |
+| Stellar | Smart Contract en Soroban (Rust). | Mantiene la estructura de datos del activo (EquipoID => List<MantenimientoRecord>), valida las firmas de los emisores autorizados y almacena de forma inalterable el hash y fecha del ledger. |
 
-**En qué punto entra la red:** Escriban aquí su respuesta.
+**En qué punto entra la red:** La red Stellar entra en acción en dos momentos clave dentro del flujo:
+
+Fase de Escritura (Registro): Cuando el técnico o supervisor firma una transacción mediante Freighter para enviar la llamada al Smart Contract en Soroban, fijando en el ledger de Stellar la creación del activo o el hash del reporte con sello de tiempo oficial.
+
+Fase de Lectura (Auditoría): Cuando el auditor o inspector consulta la dApp; el cliente realiza una llamada de solo lectura (read-only call) al estado del contrato en Soroban para traer los hashes históricos y contrastarlos localmente contra el PDF cargado.
 
 ---
 
@@ -122,9 +126,9 @@ El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única
 
 > Qué componentes de Stellar usaría y por qué cada uno. Apoyado en el criterio de pertinencia del Problem Brief. Extensión: 150–300 palabras en total.
 
-**Criterio de pertinencia (del Problem Brief):** Escriban aquí el criterio en el que se apoyan.
+**Criterio de pertinencia (del Problem Brief):**  Varias partes que no confían entre sí necesitan compartir un mismo registro inalterable con sello de tiempo, eliminando la posibilidad de que cualquiera de las entidades involucradas modifique la información histórica de forma retroactiva.
 
 | Componente de Stellar | Para qué lo usamos | Por qué ese y no otra alternativa |
 | --- | --- | --- |
-| Escriban aquí su respuesta. | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
-| Escriban aquí su respuesta. | Escriban aquí su respuesta. | Escriban aquí su respuesta. |
+| Soroban Smart Contracts (Rust). | Para programar la lógica de negocio descentralizada que controla el alta de equipos, el control de acceso por roles y el almacenamiento indexado de los hashes de mantenimiento. | Proporciona un entorno de ejecución WebAssembly (Wasm) seguro, ligero y determinista con soporte nativo en Rust. Permite manejar estructuras de datos personalizadas a costos de gas significativamente menores que EVM (Ethereum). |
+| Sello de Tiempo Nativo del Ledger (Ledger Header Timestamp). | Como mecanismo de autenticación de identidad y firma criptográfica no custodia para técnicos y supervisores. | Es la billetera estándar nativa del ecosistema Stellar. Ofrece una experiencia de usuario fluida en el navegador, permitiendo la firma de transacciones de Soroban con altos estándares de seguridad. |
