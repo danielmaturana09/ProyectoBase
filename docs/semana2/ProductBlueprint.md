@@ -98,7 +98,7 @@ El lienzo debe cubrir: problema, segmento de usuarios, propuesta de valor única
 
 > Enlace al tablero en GitHub Projects, construido con las historias priorizadas, en columnas y con criterios de aceptación por tarjeta. Extensión: enlace al tablero (obligatorio).
 
-**Enlace al tablero (obligatorio):** [Tablero Kanban en GitHub Projects](https://github.com/users/usuario/projects/1)
+**Enlace al tablero (obligatorio):** [SecureTrace Industry - Kanban](https://github.com/users/danielmaturana09/projects/1/views/1)
 
 ---
 
