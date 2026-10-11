@@ -44,13 +44,45 @@ export default function Home() {
   ]);
 
   // Conectar Wallet (Activa la sesión al instante sin alertas)
-  const handleConnectWallet = () => {
-    if (walletConnected) {
-      setWalletConnected(false);
-      setWalletAddress(null);
-    } else {
-      setWalletConnected(true);
-      setWalletAddress('GBX3...89PL (Freighter)');
+  const handleConnectWallet = async () => {
+    try {
+      if (walletConnected) {
+        setWalletConnected(false);
+        setWalletAddress(null);
+        return;
+      }
+
+      // Importar dinámicamente el API oficial de Freighter
+      const freighter = await import("@stellar/freighter-api");
+      
+      // 1. Verificar si Freighter está presente
+      const isInstalled = await freighter.isConnected();
+      if (!isInstalled) {
+        alert("La extensión Freighter no fue detectada. Abre el ícono del rompecabezas arriba a la derecha y asegúrate de tenerla activa.");
+        return;
+      }
+
+      // 2. Solicitar permiso de acceso a tu billetera
+      const accessObj = await freighter.requestAccess();
+      if (accessObj?.error) {
+        alert("Acceso denegado. Debes presionar 'Approve' en la ventana emergente de Freighter.");
+        return;
+      }
+
+      // 3. Obtener la llave pública REAL cargada en tu extensión
+      const addressObj = await freighter.getAddress();
+      if (addressObj?.address) {
+        const realAddress = addressObj.address;
+        // Corta y muestra tu llave pública real (Ej: GA2C...89X)
+        setWalletAddress(`${realAddress.substring(0, 4)}...${realAddress.substring(realAddress.length - 4)}`);
+        setWalletConnected(true);
+      } else {
+        alert("No se pudo leer la dirección. Desbloquea Freighter con tu contraseña.");
+      }
+
+    } catch (error) {
+      console.error("Error al conectar Freighter:", error);
+      alert("Abre la extensión de Freighter en tu navegador e ingresa tu contraseña primero.");
     }
   };
 
