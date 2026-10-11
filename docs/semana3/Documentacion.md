@@ -19,7 +19,7 @@ Para esta etapa del proyecto desarrollamos la interfaz de usuario funcional (MVP
 Para la gestión de traza y registro inmutable de SecureTrace Industry, evaluamos las dos rutas técnicas ofrecidas por la plataforma Stellar:
 
 ### Opción Seleccionada: Opción A (Contrato Inteligente propio en Soroban)
-- **Justificación:** Dado que SecureTrace Industry gestiona la trazabilidad detallada de componentes y controles de acceso/auditoría industrial, requerimos lógica personalizada para asociar metadatos, estados de validación y eventos multi-firma.
+- **Justificación:** Dado que SecureTrace Industry gestiona la trazabilidad detallada de componentes / auditoría industrial, requerimos lógica personalizada para asociar metadatos, estados de validación y eventos multi-firma.
 - **Implementación futura:** Desarrollaremos un Smart Contract en Rust utilizando el SDK de Soroban, compilándolo a WASM para su despliegue en la Testnet de Stellar.
 
 ---
