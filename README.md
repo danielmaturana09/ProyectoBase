@@ -1,17 +1,18 @@
 # SecureTrace Industry
 
-> **Blockchain Builders 101 — Proyecto Base**
+> **Blockchain Builders 101 — Proyecto Base**  
 > Plataforma de trazabilidad e inmutabilidad para activos y procesos industriales utilizando el ecosistema Stellar.
 
 ---
 
-## 📌 Descripción del Proyecto
+## Descripción del Proyecto
 
-**SecureTrace Industry** es un sistema diseñado para garantizar la transparencia, seguridad y trazabilidad inmutable en cadenas de suministro y gestión de activos industriales. A través de la integración con la red Stellar y contratos inteligentes en Soroban, registramos eventos, firmas de validación y estados de lotes de forma descentralizada.
+**SecureTrace Industry** es una solución diseñada para garantizar la transparencia, seguridad y trazabilidad inmutable en cadenas de suministro y gestión de activos industriales. 
+A través de la integración con la red Stellar y contratos inteligentes desarrollados en Soroban (Rust), la plataforma permite registrar eventos, firmas de validación y estados de lotes de forma descentralizada y auditable.
 
 ---
 
-## 🚀 Requisitos Previos
+## Requisitos Previos
 
 Asegúrate de tener instalado en tu sistema:
 
@@ -21,7 +22,7 @@ Asegúrate de tener instalado en tu sistema:
 
 ---
 
-## 💻 Guía de Ejecución Local
+## Guía de Ejecución Local
 
 Para ejecutar la interfaz de usuario (MVP) en tu máquina local:
 
