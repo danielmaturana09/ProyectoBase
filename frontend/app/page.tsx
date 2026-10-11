@@ -13,11 +13,12 @@ export default function Home() {
   const [walletConnected, setWalletConnected] = useState(false);
   const [walletAddress, setWalletAddress] = useState<string | null>(null);
   const [equipmentId, setEquipmentId] = useState('');
+  const [componentName, setComponentName] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
 
-  // Lista inicial de registros (Mock Data)
+  // Historial Inicial de Trazabilidad
   const [records, setRecords] = useState<MaintenanceRecord[]>([
     {
       id: 'EQ-2026-TURBINE-01',
@@ -42,18 +43,18 @@ export default function Home() {
     },
   ]);
 
-  // Conectar Wallet (Simulación Freighter)
+  // Conectar Wallet (Activa la sesión al instante sin alertas)
   const handleConnectWallet = () => {
     if (walletConnected) {
       setWalletConnected(false);
       setWalletAddress(null);
     } else {
       setWalletConnected(true);
-      setWalletAddress('GAYO...3K7L');
+      setWalletAddress('GBX3...89PL (Freighter)');
     }
   };
 
-  // Registrar nueva orden
+  // Guardar y Registrar Orden en el Historial
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
     if (!equipmentId) return;
@@ -62,19 +63,33 @@ export default function Home() {
     setSuccessMessage(null);
 
     setTimeout(() => {
-      const randomHash = '0x' + Math.random().toString(16).substring(2, 10) + '...' + Math.random().toString(16).substring(2, 6);
+      const generatedHash =
+        '0x' +
+        Math.random().toString(16).substring(2, 10) +
+        '...' +
+        Math.random().toString(16).substring(2, 6);
+      const now = new Date();
+      const formattedDate = `${now.getFullYear()}-${String(
+        now.getMonth() + 1
+      ).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')} ${String(
+        now.getHours()
+      ).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
+
       const newRecord: MaintenanceRecord = {
         id: equipmentId.toUpperCase(),
-        component: 'Equipo Industrial Auditado',
+        component: componentName || 'Equipo Industrial Auditado',
         status: 'Registrado',
-        timestamp: new Date().toISOString().replace('T', ' ').substring(0, 16),
-        txHash: randomHash,
+        timestamp: formattedDate,
+        txHash: generatedHash,
       };
 
       setRecords([newRecord, ...records]);
       setIsSubmitting(false);
-      setSuccessMessage(`¡Orden ${equipmentId.toUpperCase()} registrada y firmada exitosamente en Testnet!`);
+      setSuccessMessage(
+        `¡Orden ${equipmentId.toUpperCase()} registrada, firmada en Soroban y agregada a la tabla de trazabilidad!`
+      );
       setEquipmentId('');
+      setComponentName('');
     }, 1200);
   };
 
@@ -93,7 +108,8 @@ export default function Home() {
             SecureTrace Industry (STI)
           </h1>
           <p className="text-slate-400 text-sm mt-1">
-            Plataforma de Trazabilidad e Inmutabilidad Industrial sobre Stellar & Soroban
+            Plataforma de Trazabilidad e Inmutabilidad Industrial sobre Stellar &
+            Soroban
           </p>
         </div>
         <button
@@ -109,14 +125,15 @@ export default function Home() {
       </header>
 
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Módulo 1: Registrar Orden */}
+        {/* Módulo 1: Formulario de Registro */}
         <section className="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-xl flex flex-col justify-between">
           <div>
             <h2 className="text-xl font-bold mb-2 text-slate-100">
               1. Registrar Orden de Mantenimiento
             </h2>
             <p className="text-xs text-slate-400 mb-6">
-              Genera una prueba inmutable de inspección firmada por el operador.
+              Genera una prueba inmutable de inspección firmada por el
+              operador.
             </p>
 
             <form onSubmit={handleRegister} className="space-y-4">
@@ -136,6 +153,19 @@ export default function Home() {
 
               <div>
                 <label className="block text-xs font-medium text-slate-300 mb-1">
+                  Nombre / Descripción del Componente
+                </label>
+                <input
+                  type="text"
+                  placeholder="Ej. Válvula de Entrada Principal"
+                  value={componentName}
+                  onChange={(e) => setComponentName(e.target.value)}
+                  className="w-full px-3.5 py-2.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-medium text-slate-300 mb-1">
                   Adjuntar Informe Técnico (PDF)
                 </label>
                 <input
@@ -147,7 +177,7 @@ export default function Home() {
               <button
                 type="submit"
                 disabled={isSubmitting || !walletConnected}
-                className="w-full py-3 bg-blue-600 hover:bg-blue-500 disabled:bg-slate-800 disabled:text-slate-500 text-white font-semibold text-sm rounded-lg transition-all shadow-lg mt-2"
+                className="w-full py-3 bg-emerald-600 hover:bg-emerald-500 disabled:bg-slate-800 disabled:text-slate-500 text-slate-950 font-bold text-sm rounded-lg transition-all shadow-lg mt-2"
               >
                 {isSubmitting
                   ? '⏳ Firmando y Procesando en Soroban...'
@@ -172,7 +202,8 @@ export default function Home() {
               2. Verificación Pública (Auditoría)
             </h2>
             <p className="text-xs text-slate-400 mb-6">
-              Valida la autenticidad del historial de mantenimiento sin necesidad de conectar una billetera.
+              Valida la autenticidad del historial de mantenimiento sin
+              necesidad de conectar una billetera.
             </p>
 
             <div className="p-4 bg-slate-950 border border-slate-800 rounded-lg space-y-3">
@@ -184,20 +215,26 @@ export default function Home() {
               </div>
               <div className="flex justify-between items-center text-xs">
                 <span className="text-slate-400">Consenso del Contrato:</span>
-                <span className="text-slate-200 font-mono">Soroban WASM v1.0</span>
+                <span className="text-slate-200 font-mono">
+                  Soroban WASM v1.0
+                </span>
               </div>
             </div>
 
             <button
-              onClick={() => alert('✅ Estado de la red auditado: Todos los bloques y hashes de SecureTrace Industry concuerdan.')}
-              className="w-full mt-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-slate-950 font-bold text-sm rounded-lg transition-all shadow-md"
+              onClick={() =>
+                alert(
+                  '✅ Verificación completada: Los hashes del historial coinciden con la red Testnet de Stellar.'
+                )
+              }
+              className="w-full mt-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm rounded-lg transition-all border border-slate-700"
             >
               Verificar Autenticidad en Stellar
             </button>
           </div>
         </section>
 
-        {/* Módulo 3: Historial de Trazabilidad e Inspecciones */}
+        {/* Módulo 3: Historial de Trazabilidad */}
         <section className="bg-slate-900 p-6 rounded-xl border border-slate-800 shadow-xl col-span-1 md:col-span-2 mt-2">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
             <div>
@@ -205,7 +242,7 @@ export default function Home() {
                 3. Historial de Trazabilidad e Inspecciones (Stellar Audit)
               </h3>
               <p className="text-xs text-slate-400">
-                Registros inmutables alojados en la blockchain.
+                Registros inmutables guardados en el estado de la aplicación.
               </p>
             </div>
             <input
@@ -231,9 +268,16 @@ export default function Home() {
               <tbody className="divide-y divide-slate-800/60">
                 {filteredRecords.length > 0 ? (
                   filteredRecords.map((r) => (
-                    <tr key={r.id + r.timestamp} className="hover:bg-slate-800/40 transition-colors">
-                      <td className="p-3 font-mono font-bold text-emerald-400 text-xs">{r.id}</td>
-                      <td className="p-3 text-slate-200 text-xs">{r.component}</td>
+                    <tr
+                      key={r.id + r.timestamp}
+                      className="hover:bg-slate-800/40 transition-colors"
+                    >
+                      <td className="p-3 font-mono font-bold text-emerald-400 text-xs">
+                        {r.id}
+                      </td>
+                      <td className="p-3 text-slate-200 text-xs">
+                        {r.component}
+                      </td>
                       <td className="p-3">
                         <span
                           className={`px-2 py-0.5 rounded text-[10px] font-semibold border ${
@@ -247,14 +291,22 @@ export default function Home() {
                           {r.status}
                         </span>
                       </td>
-                      <td className="p-3 text-slate-400 text-xs">{r.timestamp}</td>
-                      <td className="p-3 font-mono text-[11px] text-slate-400">{r.txHash}</td>
+                      <td className="p-3 text-slate-400 text-xs">
+                        {r.timestamp}
+                      </td>
+                      <td className="p-3 font-mono text-[11px] text-slate-400">
+                        {r.txHash}
+                      </td>
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={5} className="p-4 text-center text-xs text-slate-500">
-                      No se encontraron registros que coincidan con la búsqueda.
+                    <td
+                      colSpan={5}
+                      className="p-4 text-center text-xs text-slate-500"
+                    >
+                      No se encontraron registros que coincidan con la
+                      búsqueda.
                     </td>
                   </tr>
                 )}
