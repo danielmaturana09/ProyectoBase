@@ -37,7 +37,7 @@ Para la gestión de traza y registro inmutable de SecureTrace Industry, evaluamo
 ## 4. Bloqueos y Siguientes Pasos
 
 - **Retos y Bloqueos:** Desafíos menores en el acoplamiento inicial de componentes y estructuración de la carpeta `frontend`.
-- **Siguiente Paso (Semana 4):** Inicializar el entorno con `stellar CLI`, escribir la lógica base del contrato en Rust (Soroban) y conectar la interfaz cliente con las invocaciones de red en Testnet.
+- **Siguiente Paso:** Inicializar el entorno con `stellar CLI`, escribir la lógica base del contrato en Rust (Soroban) y conectar la interfaz cliente con las invocaciones de red en Testnet.
 
 ---
 
