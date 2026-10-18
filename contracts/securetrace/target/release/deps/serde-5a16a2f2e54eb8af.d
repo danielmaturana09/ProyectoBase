@@ -1,0 +1,14 @@
+C:\Users\DES\SecureTrace-Industry\contracts\securetrace\target\release\deps\serde-5a16a2f2e54eb8af.d: C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\lib.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\integer128.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\mod.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\de.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\ser.rs C:\Users\DES\SecureTrace-Industry\contracts\securetrace\target\release\build\serde-f878dd49f5272992\out/private.rs
+
+C:\Users\DES\SecureTrace-Industry\contracts\securetrace\target\release\deps\libserde-5a16a2f2e54eb8af.rlib: C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\lib.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\integer128.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\mod.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\de.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\ser.rs C:\Users\DES\SecureTrace-Industry\contracts\securetrace\target\release\build\serde-f878dd49f5272992\out/private.rs
+
+C:\Users\DES\SecureTrace-Industry\contracts\securetrace\target\release\deps\libserde-5a16a2f2e54eb8af.rmeta: C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\lib.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\integer128.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\mod.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\de.rs C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\ser.rs C:\Users\DES\SecureTrace-Industry\contracts\securetrace\target\release\build\serde-f878dd49f5272992\out/private.rs
+
+C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\lib.rs:
+C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\integer128.rs:
+C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\mod.rs:
+C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\de.rs:
+C:\Users\DES\.cargo\registry\src\index.crates.io-1949cf8c6b5b557f\serde-1.0.229\src\private\ser.rs:
+C:\Users\DES\SecureTrace-Industry\contracts\securetrace\target\release\build\serde-f878dd49f5272992\out/private.rs:
+
+# env-dep:OUT_DIR=C:\\Users\\DES\\SecureTrace-Industry\\contracts\\securetrace\\target\\release\\build\\serde-f878dd49f5272992\\out
