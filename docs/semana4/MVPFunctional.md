@@ -11,7 +11,7 @@
 ## 1. Evidencia Verificable en Stellar Testnet
 
 * **ID del Contrato Inteligente (Soroban):CAZFMNR7R3XZ6VWAMXLQM543GCJNDKF7CJFHFYQORIUKUTOFYWL7IMF5
-* **Enlace al Contrato en el Explorador:** [Ver Contrato en StellarExpert Testnet]([https://stellar.expert/explorer/testnet/contract/CC...EXAMPLE](https://stellar.expert/explorer/testnet/contract/CAZFMNR7R3XZ6VWAMXLQM543GCJNDKF7CJFHFYQORIUKUTOFYWL7IMF5))
+* **Enlace al Contrato en el Explorador:** [Ver Contrato en StellarExpert Testnet] (https://stellar.expert/explorer/testnet/contract/CAZFMNR7R3XZ6VWAMXLQM543GCJNDKF7CJFHFYQORIUKUTOFYWL7IMF5)
 * **Transacción de Registro en Testnet:** [Ver Transacción en StellarExpert](https://stellar.expert/explorer/testnet/tx/0x...EXAMPLE)
 
 ---
