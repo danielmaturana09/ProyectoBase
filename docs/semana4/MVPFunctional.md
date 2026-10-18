@@ -2,7 +2,7 @@
 
 * **Proyecto:** SecureTrace Industry (STI)
 * **Red:** Stellar Testnet (Soroban Smart Contracts)
-* **Video Demo / Pitch:** [Ver Video Demo en YouTube/Loom](https://youtu.be/K9tHwnw3zyQ)
+* **Video Demo / Pitch:** [Ver Video en YouTube](https://youtu.be/K9tHwnw3zyQ)
 
 ---
 
