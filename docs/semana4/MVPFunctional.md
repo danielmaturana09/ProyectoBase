@@ -2,9 +2,7 @@
 
 * **Proyecto:** SecureTrace Industry (STI)
 * **Red:** Stellar Testnet (Soroban Smart Contracts)
-* **Repositorio:** [SecureTrace Industry GitHub Repository](https://github.com/tu-usuario/tu-repo)
-* **Video Demo / Pitch:** [Ver Video Demo en YouTube/Loom](https://www.youtube.com/watch?v=ejemplo](https://youtu.be/K9tHwnw3zyQ) 
-* **Despliegue Web:** [https://securetrace-industry.vercel.app](https://securetrace-industry.vercel.app) 
+* **Video Demo / Pitch:** [Ver Video Demo en YouTube/Loom](https://youtu.be/K9tHwnw3zyQ)
 
 ---
 
